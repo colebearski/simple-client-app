@@ -7,13 +7,13 @@
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="/">Home</a>
+        <a class="{{Request::is('/') ? 'active' : ''}} nav-link" href="/">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/about">About</a>
+        <a class="{{Request::is('about') ? 'active' : ''}} nav-link" href="/about">About</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="/contact">Contact</a>
+        <a class="{{Request::is('contact') ? 'active' : ''}} nav-link" href="/contact">Contact</a>
       </li>
     </ul>
   </div>
