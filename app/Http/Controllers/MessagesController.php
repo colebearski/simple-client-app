@@ -30,7 +30,7 @@ class MessagesController extends Controller
         $message->save();
 
         // Redirect
-        return redirect('/');
+        return redirect('/')->with('success', 'Message Sent');
     }
     // we still want to call a message model and insert it into the db
 }
