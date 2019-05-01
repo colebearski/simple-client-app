@@ -19,8 +19,8 @@ class MessagesController extends Controller
         ]);
 
         // Upon submissiomn
-        // Create new message
-        // Eloquen
+        // Create new message submission to our Message Model
+        // Eloquent
         $message = new Message;
         $message->name = $request->input('name');
         $message->email = $request->input('email');
@@ -32,5 +32,14 @@ class MessagesController extends Controller
         // Redirect
         return redirect('/')->with('success', 'Message Sent');
     }
-    // we still want to call a message model and insert it into the db
+
+    public function getMessages() {
+        // Eloquent
+        // set a variable
+        $messages = Message::all();
+
+        // Return a view 'return view 'messages''
+        // And pass data '->with'messages', $messages;'
+        return view('messages')->with('messages', $messages);
+    }
 }

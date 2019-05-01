@@ -25,3 +25,6 @@ Route::get('/contact', function () {
 
 // goes to a controller 'MessagesController' calls a function 'submit'
 Route::post('/contact/submit', 'MessagesController@submit');
+
+// Messages router
+Route::get('/messages', 'MessagesController@getMessages');
